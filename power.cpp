@@ -1,37 +1,24 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 
-
-bool powerOf2(int n)
+bool ispowerOf2(int n)
 {
-	
-	if (n == 1)
-		return true;
-
-	
-	else if (n % 2 != 0 || n == 0)
-		return false;
-	return powerOf2(n / 2);
+if(n&(n-1))
+	return false;
+return true;
 }
 
 
 int main()
 {
-	int n = 64; 
-	int m = 12; 
-
-	if (powerOf2(n) == 1)
-		cout << "True" << endl;
-
-	else
-		cout << "False" << endl;
-
-	if (powerOf2(m) == 1)
-		cout << "True" << endl;
-
-	else
-		cout << "False" << endl;
+int n;
+cout<<"ENTER THE NUMBER U WANNA CHECK IS POWER OF 2 OR NOT:";
+cin>>n;
+if(ispowerOf2(n))
+cout<<"YES IT IS POWER OF 2";
+else
+cout<<" IT IS NOT POWER OF 2";
+return 0;
 }
 
-// This code is contributed by Aditya Kumar (adityakumar129)
+
